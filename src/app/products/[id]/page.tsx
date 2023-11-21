@@ -38,7 +38,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
 
   // const reviews = await getProductReviews(id);
   const reviewTexts: string[] = product.reviews!.map(
-    (review: Review) => review.text
+    (review: Review) => review.text.slice(0, 300)
   );
 
   return (
