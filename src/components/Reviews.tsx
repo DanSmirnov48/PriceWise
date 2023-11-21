@@ -53,11 +53,11 @@ function Reviews({ productId, productReviews }: Props) {
 
   useEffect(() => {
     if (typeof productReviews === "string") {
-      //Product does not have reviewSummary
+      //Product has reviewSummary
       // console.log(JSON.parse(productReviews))
       setData(JSON.parse(productReviews));
     } else {
-      //Product has reviewSummary
+      //Product does not have reviewSummary
       // console.log(productReviews)
       complete(JSON.stringify(productReviews));
     }
